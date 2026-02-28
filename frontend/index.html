@@ -241,7 +241,7 @@ const firebaseConfig = {
     btn.disabled = true; btn.textContent = 'Sending Alert…'; clearStatus();
 
     try {
-      const res = await fetch('http://localhost:3000/simulate-crash', {
+      const res = await fetch('https://smart-crash-detector-production.up.railway.app/simulate-crash', {
         method:'POST', headers:{'Content-Type':'application/json'},
         body: JSON.stringify({ ownerName, phoneNumber, carModel, vehicleNumber })
       });
